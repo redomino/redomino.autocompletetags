@@ -1,0 +1,32 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:zcml="http://namespaces.zope.org/zcml"
+  i18n_domain="redomino.autocompletetags">
+
+  <!-- Resources -->
+  <browser:resource
+    name="redomino.autocompletetags.css"
+    file="./css/tags.css"
+   />
+
+  <browser:resource
+    name="redomino.autocompletetags.js"
+    file="./js/tags.js"
+    />
+
+  <!-- Views -->
+  <browser:view
+    for="*"
+    name="querytags"
+    class=".autocomplete.QueryTags"
+    permission="zope2.View"
+    />
+  <browser:view
+    for="*"
+    name="autocompletekeyword"
+    class=".macros.AutocompleteMacroView"
+    permission="zope2.View"
+    />
+
+</configure>
